@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A bio page for Nikhil Kumar Pandey">
+  <title>My Bio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <style>
+    /* Add CSS styling here */
+    body {
+      background-color: aquamarine;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      width: 80%;
+      margin: 50px auto;
+      padding: 30px;
+    }
+    .card img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+    .card h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 1.5em;
+      line-height: 1.5;
+    }
+    .card .social-links {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+    }
+    .card .social-links a {
+      color: #333;
+      font-size: 2em;
+      margin: 0 10px;
+      transition: all 0.2s ease-in-out;
+    }
+    .card .social-links a:hover {
+      color: #1877f2;
+    }
+    /* Media Queries */
+    @media only screen and (max-width: 600px) {
+      .card {
+        width: 90%;
+      }
+      .card img {
+        width: 150px;
+        height: 150px;
+      }
+      .card h1 {
+        font-size: 2em;
+      }
+      .card p {
+        font-size: 1.2em;
+      }
+    }
+    /touch effect/
+    button:active {
+      background-color: blue;
+    }
+    /hover effect/
+    a:hover {
+      color: red;
+    }
+    
+    }
+    /* Color Change Buttons */
+    .color-change-button {
+      background-color: blue;
+      padding: 10px 20px;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .color-change-button:active {
+      background-color: darkblue;
+    }
+  </style>
+</head>
+<body
+<body>
+  <input type="color" id="color-picker">
+  <button class="color-change-button" id="color-change-button-1" style="background-color: blue;">Change to blue</button>
+  <button class="color-change-button" id="color-change-button-2" style="background-color: green;">Change to green</button>
+  <button class="color-change-button" id="color-change-button-3" style="background-color: red;">Change to red</button>
+  
+  <div class="container">
+    <div class="card">
+      <img src="./WhatsApp Image 2023-01-23 at 8.45.49 AM.jpeg" alt="Profile picture of Nikhil Kumar Pandey" style="height: fit-content;">
+      <header>
+        <h1>Nikhil kumar pandey</h1>
+      </header>
+      <main>
+        <section id="education">
+          <h2>Education</h2>
+          <ul>
+            <li> clear 10 from G.B.S.S.S Nehru vihar delhi with 70% marks</li>
+            <li>clear 12 also from G.B.S.S.S nehru vihar with 72% marks</li>
+            <li>Now doing bca from jims noida </li>
+          </ul>
+        </section>
+        <section id="contact">
+          <h2>Contact</h2>
+          <ul>
+            <li>Email: nikhilpandeynp2003@gmail.com</li>
+            <li...
+          </ul>
+        </section>
+      </main>
+      <footer class="social-links">
+        <a href="https://www.facebook.com/nikhilkumar.pandey.503?mibextid=ZbWKwL" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/nikhil-pandey-b75814258" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com/brahman_boy001?igshid=YmMyMTA2M2Y=" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </footer>
+    </div>
+  </div>
+  <script>
+    // Add JavaScript code here 
+    document.getElementById("color-picker").addEventListener("input", function() {
+    document.body.style.backgroundColor = this.value;
+  });
+    const colorPicker = document.getElementById("color-picker");
+colorPicker.addEventListener("change", (event) => {
+  document.body.style.backgroundColor = event.target.value;
+});
+
+const colorChangeButtons = document.querySelectorAll(".color-change-button");
+colorChangeButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    document.body.style.backgroundColor = getComputedStyle(event.target).backgroundColor;
+  });
+});
+
+const darkModeButton = document.getElementById("dark-mode-button");
+darkModeButton.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
+  </script>
+</body>
+</html
